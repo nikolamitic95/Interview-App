@@ -1,6 +1,7 @@
+import { baseAPI } from '../shared/baseApi';
 import { ReportObj } from '../entities/ReportObj'
 
-class ServiceReport {
+class ReportService {
 
     getReports() {
         return baseAPI.get('reports')
@@ -22,4 +23,4 @@ class ServiceReport {
     }
 }
 
-export const serviceReport = new ServiceReport();
+export const reportService = new ReportService();

@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Header } from './Header/Header';
 import { Search } from './Search/Search';
-import { candidateService } from '../../service/CandidateService';
+import { candidateService } from '../../services/candidateService';
 import { Container, Row } from 'react-materialize';
 import { Candidates } from './Candidates/Candidates';
+import { search } from '../../shared/utilities';
 
 
 
@@ -14,6 +15,7 @@ class HomePage extends React.Component {
 
         this.state = {
             candidates: [],
+            filteredCandidates: [],
         }
 
     }
@@ -21,24 +23,28 @@ class HomePage extends React.Component {
     componentDidMount() {
         candidateService.getCandidates()
             .then(data => {
-                return this.setState({ candidates: data })
+                return this.setState({ candidates: data, filteredCandidates: data })
             })
     }
 
-
-
-
-
+    searchedCandidates = (textInput) => {
+        const res = search(this.state.candidates, ['name'], textInput)
+        this.setState({ filteredCandidates: res })
+    }
 
     render() {
         return (
             <div>
                 <Header />
                 <Container>
-                    <Search />
+                    <Search
+                        searchedCandidates={this.searchedCandidates}
+                    />
                     <hr></hr>
                     <Row>
-                    <Candidates candidates={this.state.candidates} />
+                        <Candidates
+                            candidates={this.state.filteredCandidates}
+                        />
                     </Row>
                 </Container>
             </div>

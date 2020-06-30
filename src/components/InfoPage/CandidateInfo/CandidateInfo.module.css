@@ -1,0 +1,14 @@
+.img{
+    width: 307px;
+    height: 300px;
+}
+
+.row{
+    height: 45px !important;
+}
+.table{
+    height: 300px !important;
+}
+.container{
+    margin-top: 35px !important;
+}

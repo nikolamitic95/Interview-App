@@ -4,6 +4,15 @@
 .search{
     margin-top: 40px;
 }
+.input{
+    padding-left: 25px !important;
+    width: 99% !important;
+}
+.icon{
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+}
 .form{
-    padding-left: 20px !important;
+    padding-left: 0px !important;
 }

@@ -8,6 +8,7 @@ const Candidates = ({ candidates }) => {
         candidates.map(candidate => (
             <Candidate
                 key={candidate.id}
+                id={candidate.id}
                 name={candidate.name}
                 email={candidate.email}
             />
