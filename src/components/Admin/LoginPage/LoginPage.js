@@ -36,31 +36,35 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <Container>
+            <div className={styles.wrapper}>
                 <div onKeyUp={(event) => { if (event.keyCode === 13) { this.submitData() } }} className={styles.loginForm}>
-                    <div><i className={`fa fa-user ${styles.user}`}>
-                        {this.state.wrongUser ? <span className={styles.wrong}> wrong email or password</span> : ""}
-                    </i>
+                    <div><i className={`fa fa-user ${styles.user}`}></i>
                     </div>
+                    <div>
+                        {this.state.wrongUser ? <span className={styles.wrong}> wrong email or password</span> : ""}
+                    </div>
+                    
                     <TextInput
+                        className={styles.input}
                         onChange={this.loginCheck}
                         email
-                        label="Email"
+                        placeholder="Email"
                         name="email"
                         validate
                     />
 
                     <TextInput
+                        className={styles.input}
                         onChange={this.loginCheck}
-                        label="Password"
+                        placeholder="Password"
                         name="password"
                         password
                     />
                     <div className={styles.btn}>
-                        <Button onClick={this.submitData}>Login</Button>
+                        <Button className={`${styles.btn1} ${styles.fadeIn}`} onClick={this.submitData}>Login</Button>
                     </div>
                 </div>
-            </Container >
+            </div >
         )
     }
 }
