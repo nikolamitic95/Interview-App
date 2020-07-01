@@ -5,6 +5,7 @@ import { reportService } from '../../services/reportService';
 import { Header } from '../HomePage/Header/Header';
 import { CandidateInfo } from './CandidateInfo/CandidateInfo';
 import { ReportInfo } from './ReportInfo/ReportInfo';
+import Modal from 'react-modal';
 
 class InfoPage extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class InfoPage extends React.Component {
         this.state = {
             candidates: [],
             reports: [],
+            modalIsOpen: false
         }
     }
 
@@ -22,6 +24,10 @@ class InfoPage extends React.Component {
 
         reportService.getReports()
             .then(data => this.setState({ reports: data }))
+    }
+
+    openModal = () => {
+        this.setState(prevState => ({ modalIsOpen: !prevState.modalIsOpen }))
     }
 
     render() {
@@ -38,6 +44,8 @@ class InfoPage extends React.Component {
                 <ReportInfo
                     reports={this.state.reports}
                     candidateId={this.props.match.params.id}
+                    openModal={this.openModal}
+                    modalIsOpen={this.state.modalIsOpen}
                 />
             </div>
         )

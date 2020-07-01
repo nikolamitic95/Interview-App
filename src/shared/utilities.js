@@ -6,7 +6,7 @@ const convertDate = (date) => {
     const d = dateOfBirth.getDate();
 
     return (
-        `${y}-${m}-${d}`
+        `${d}-${m}-${y}`
     )
 }
 

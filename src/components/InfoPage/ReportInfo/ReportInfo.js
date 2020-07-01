@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Table, Container, Row, Col } from 'react-bootstrap';
 import { convertDate } from '../../../shared/utilities';
+import { DetailedReport } from '../../../shared/Modal/DetailedReport';
 
 
-const ReportInfo = ({ reports, candidateId }) => {
+const ReportInfo = ({ reports, candidateId, openModal, modalIsOpen }) => {
 
     let thisCandidatesReports = reports.filter(report => report.candidateId === Number(candidateId))
 
@@ -27,7 +28,12 @@ const ReportInfo = ({ reports, candidateId }) => {
                                     <td>{report.companyName}</td>
                                     <td>{convertDate(report.interviewDate)}</td>
                                     <td>{report.status}</td>
-                                    <td width='25px'><i className="fa fa-eye"></i></td>
+                                    <td width='25px'><i className="fa fa-eye" onClick={() => { openModal() }}></i></td>
+                                    <DetailedReport
+                                        modalIsOpen={modalIsOpen}
+                                        openModal={openModal}
+                                        report={report}
+                                    />
                                 </tr>)
                             })}
                         </tbody>

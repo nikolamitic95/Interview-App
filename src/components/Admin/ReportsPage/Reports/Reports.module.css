@@ -1,0 +1,15 @@
+.company{
+    width: 320px !important;
+}
+.name{
+    width: 320px !important;
+}
+.date{
+    width: 120px !important;
+}
+.status{
+    width: 100px;
+}
+.icon{
+    padding-right: 10px;
+}
