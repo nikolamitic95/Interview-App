@@ -8,13 +8,13 @@ const Candidate = ({ name, email, id }) => {
     return (
         <Col xl='4' lg='6' md='6' sm='12'>
 
-            <Link to={`./info/${id}`}>
+            <Link className={styles.link} to={`./info/${id}`}>
 
                 <Card className={styles.card} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="./user.png" />
+                    <Card.Img variant="top" src="./user.jpg" />
                     <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>
+                        <Card.Title className={styles.name}>{name}</Card.Title>
+                        <Card.Text className={styles.email}>
                             {email}
                         </Card.Text>
                     </Card.Body>

@@ -12,8 +12,8 @@ const Search = ({ searchedCandidates }) => {
 
     return (
         <Row className={styles.search}>
-            <Col lg='4' md='12' sm='12' className={styles.title}><h5>Candidates</h5></Col>
-            <Col lg='8' md='12' sm='12' className={styles.form}>
+            <Col xl='4' lg='4' md='12' sm='12' className={styles.title}><h5>Candidates</h5></Col>
+            <Col xl='8' lg='8' md='12' sm='12' className={styles.form}>
                 <span>
                     <Form >
                         <FaSearch className={styles.icon} />

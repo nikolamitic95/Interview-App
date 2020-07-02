@@ -10,10 +10,10 @@ const Report = ({ company, name, status, date, openModal, modalIsOpen, phase, re
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th className={styles.company}>{company}</th>
-                    <th className={styles.name}>{name}</th>
-                    <th className={styles.date}>{convertDate(date)}</th>
-                    <th className={styles.status}>{status}</th>
+                    <th className={styles.company}>{company}<br></br><span className={styles.span}>company</span></th>
+                    <th className={styles.name}>{name}<br></br><span className={styles.span}>candidate</span></th>
+                    <th className={styles.date}>{convertDate(date)}<br></br><span className={styles.span}>interview date</span></th>
+                    <th className={styles.status}>{status}<br></br><span className={styles.span}>status</span></th>
                     <th> <i className={`${styles.icon} fa fa-eye`} onClick={() => { openModal() }}></i>
                         <i className="fa fa-close" onClick={() => { removeReport(id) }}></i>
                     </th>

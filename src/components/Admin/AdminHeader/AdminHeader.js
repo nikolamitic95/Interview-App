@@ -26,12 +26,12 @@ const AdminHeader = () => {
         >
             
             <Link className={styles.link} to='/admin/reports'>
-                <NavItem>
+                <NavItem className={styles.headerColor}>
                     Reports
                 </NavItem>
             </Link>
-            <Link  to='/admin/reports/createreport'>
-                <NavItem>
+            <Link className={styles.link}  to='/admin/reports/createreport'>
+                <NavItem className={styles.headerColor}>
                     Create Report
                 </NavItem>
             </Link>

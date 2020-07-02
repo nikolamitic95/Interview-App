@@ -9,12 +9,12 @@ const CandidateInfo = ({ name, email, dob, education }) => {
     return (
         <Container className={styles.container}>
             <Row>
-                <Col lg='4'>
+                <Col lg='4' md='12' sm='12'>
                     <div>
-                        <img className={styles.img} src="../user.png" />
+                        <img className={styles.img} src="../user.jpg" />
                     </div>
                 </Col>
-                <Col lg='8'>
+                <Col lg='8' md='12' sm='12'>
                     <Table className={styles.table} striped borderless hover variant="dark">
                         <thead>
                             <tr>

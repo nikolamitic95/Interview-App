@@ -41,6 +41,9 @@ class HomePage extends React.Component {
                         searchedCandidates={this.searchedCandidates}
                     />
                     <hr></hr>
+                </Container>
+
+                <Container>
                     <Row>
                         <Candidates
                             candidates={this.state.filteredCandidates}

@@ -24,13 +24,13 @@ const Header = () => {
                 preventScrolling: true
             }}
         >
-            <Link to='/admin'>
-                <NavItem>
+            <Link className={styles.link} to='/admin'>
+                <NavItem className={styles.headerColor}>
                     Login
                 </NavItem>
             </Link>
             <Link className={styles.link} to='/'>
-                <NavItem>
+                <NavItem className={styles.headerColor}>
                     Candidates
                 </NavItem>
             </Link>

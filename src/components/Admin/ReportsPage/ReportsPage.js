@@ -40,7 +40,6 @@ class ReportsPage extends React.Component {
             tempArray.splice(index, 1)
         }
         this.setState({ filteredReports: tempArray })
-
     }
 
     render() {
