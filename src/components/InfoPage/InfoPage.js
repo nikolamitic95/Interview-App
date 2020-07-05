@@ -5,7 +5,6 @@ import { reportService } from '../../services/reportService';
 import { Header } from '../HomePage/Header/Header';
 import { CandidateInfo } from './CandidateInfo/CandidateInfo';
 import { ReportInfo } from './ReportInfo/ReportInfo';
-import Modal from 'react-modal';
 
 class InfoPage extends React.Component {
     constructor(props) {

@@ -4,8 +4,9 @@ import { AdminHeader } from '../AdminHeader/AdminHeader';
 import { reportService } from '../../../services/reportService';
 import { Reports } from '../ReportsPage/Reports/Reports';
 import { Container } from 'react-bootstrap';
-import { ReportsSearch } from './Search/Search';
+import { ReportsSearch } from './Search/ReportsSearch';
 import { search } from '../../../shared/utilities';
+import { authentication, reportFromServer } from '../../../services/adminService';
 
 
 class ReportsPage extends React.Component {
@@ -20,7 +21,7 @@ class ReportsPage extends React.Component {
 
     componentDidMount() {
         reportService.getReports()
-            .then(reports => this.setState({ reports: reports, filteredReports: reports }))
+            .then(data => this.setState({ reports: data, filteredReports: data }))
     }
 
     searchedReports = (textInput) => {
@@ -34,19 +35,21 @@ class ReportsPage extends React.Component {
 
     removeReport = (id) => {
         let tempArray = this.state.filteredReports
-        let elementToRemove = this.state.filteredReports.filter(report => report.id === id)
+        let elementToRemove = this.state.filteredReports.filter(report => report.reportId === id)
         const index = tempArray.indexOf(elementToRemove[0]);
         if (index > -1) {
             tempArray.splice(index, 1)
         }
         this.setState({ filteredReports: tempArray })
+        reportFromServer.remove(id)
     }
 
     render() {
-        // const access = Authentication.isLogon()
-        // if (!access) {
-        //     this.props.history.push('/admin')
-        // }
+        const access = authentication.isLogon()
+        if (!access) {
+            this.props.history.push('/admin')
+        }
+
         return (
             <div>
                 <AdminHeader />
@@ -61,7 +64,6 @@ class ReportsPage extends React.Component {
                         removeReport={this.removeReport}
                     />
                 </Container>
-
             </div>
         )
     }

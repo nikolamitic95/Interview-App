@@ -8,7 +8,6 @@ import { Candidates } from './Candidates/Candidates';
 import { search } from '../../shared/utilities';
 
 
-
 class HomePage extends React.Component {
     constructor(props) {
         super(props);

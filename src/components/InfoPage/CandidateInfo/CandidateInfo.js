@@ -7,8 +7,8 @@ import { convertDate } from '../../../shared/utilities';
 
 const CandidateInfo = ({ name, email, dob, education }) => {
     return (
-        <Container className={styles.container}>
-            <Row>
+        <Container  className={styles.container}>
+            <Row >
                 <Col lg='4' md='12' sm='12'>
                     <div>
                         <img className={styles.img} src="../user.jpg" />
@@ -18,22 +18,22 @@ const CandidateInfo = ({ name, email, dob, education }) => {
                     <Table className={styles.table} striped borderless hover variant="dark">
                         <thead>
                             <tr>
-                                <th colSpan="1">Name:</th>
-                                <th>Date of Birth:</th>
+                                <td colSpan="1">Name:</td>
+                                <td>Date of Birth:</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{name}</td>
-                                <td>{convertDate(dob)}</td>
+                                <th>{name}</th>
+                                <th>{convertDate(dob)}</th>
                             </tr>
                             <tr className={styles.row}>
-                                <th>Email:</th>
-                                <th>Education:</th>
+                                <td>Email:</td>
+                                <td>Education:</td>
                             </tr>
                             <tr>
-                                <td>{email}</td>
-                                <td>{education}</td>
+                                <th>{email}</th>
+                                <th>{education}</th>
                             </tr>
                         </tbody>
                     </Table>

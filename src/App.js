@@ -8,7 +8,8 @@ import { Switch, Route } from 'react-router-dom';
 import { HomePage } from './components/HomePage/HomePage';
 import { InfoPage } from './components/InfoPage/InfoPage';
 import { LoginPage } from './components/Admin/LoginPage/LoginPage';
-import { ReportsPage } from './components/Admin/ReportsPage/ReportsPage'
+import { ReportsPage } from './components/Admin/ReportsPage/ReportsPage';
+import { CreateReportPage } from './components/Admin/CreateReportPage/CreateReportPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/info/:id' component={InfoPage} />
         <Route exact path='/admin' component={LoginPage} />
         <Route exact path='/admin/reports' component={ReportsPage} />
+        <Route exact path='/admin/reports/createreport' component={CreateReportPage} />
       </Switch>
     </div>
   );

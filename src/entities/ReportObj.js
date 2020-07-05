@@ -1,6 +1,6 @@
 export class ReportObj {
     constructor(apiReport) {
-        this.ReportId = apiReport.id
+        this.reportId = apiReport.id
         this.candidateId = apiReport.candidateId
         this.candidateName = apiReport.candidateName
         this.companyId = apiReport.companyId

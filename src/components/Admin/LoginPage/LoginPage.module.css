@@ -1,11 +1,11 @@
-
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-  }
+}
 
-.loginForm{
+.loginForm {
     margin-top: 100px;
+    margin-bottom: 100px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -14,19 +14,11 @@ body {
     max-width: 450px;
     position: relative;
     padding: 0px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-.wrapper{
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
-}
+
 .user {
     margin-top: 30px;
     font-size: 75px;
@@ -38,46 +30,47 @@ body {
     font-size: 30px;
 }
 
-.wrapper{
-     display: flex;
-  align-items: center;
-  flex-direction: column; 
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    background-color: #56baed;
 }
 
-.btn{
+.btn {
     text-align: center !important;
 }
 
-.btn1{
+.btn1 {
     width: 250px;
     height: 50px !important;
-background-color: #56baed !important;
-border: none !important;
-color: white !important;
-text-align: center !important;
-text-decoration: none !important;
-display: inline-block !important;
-text-transform: uppercase !important;
-font-size: 13px !important;
--webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4) !important;
-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4) !important;
--webkit-border-radius: 5px 5px 5px 5px !important;
-border-radius: 5px 5px 5px 5px !important;
-margin: 5px 20px 40px 20px !important;
--webkit-transition: all 0.3s ease-in-out !important;
--moz-transition: all 0.3s ease-in-out !important;
--ms-transition: all 0.3s ease-in-out !important;
--o-transition: all 0.3s ease-in-out !important;
-transition: all 0.3s ease-in-out !important;
+    background-color: #56baed !important;
+    border: none !important;
+    color: white !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4) !important;
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4) !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px !important;
+    margin: 5px 20px 40px 20px !important;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    -moz-transition: all 0.3s ease-in-out !important;
+    -ms-transition: all 0.3s ease-in-out !important;
+    -o-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
 }
-.btn1:hover{
+.btn1:hover {
     background-color: #39ace7 !important;
 }
-.btn1:active{
+.btn1:active {
     -moz-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     -o-transform: scale(0.95);
@@ -113,15 +106,13 @@ transition: all 0.3s ease-in-out !important;
     -o-transform: scale(0.95) !important;
     -ms-transform: scale(0.95) !important;
     transform: scale(0.95) !important;
-  }
-  
-  .input:focus {
+}
+
+.input:focus {
     background-color: #fff !important;
     border-bottom: 2px solid #5fbae9 !important;
-  }
-  
-  .input::placeholder {
-    color: #cccccc !important;
-  }
+}
 
-  
+.input::placeholder {
+    color: #cccccc !important;
+}

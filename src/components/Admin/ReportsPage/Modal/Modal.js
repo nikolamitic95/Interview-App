@@ -1,16 +1,16 @@
 import React from 'react';
 import Modal from 'react-modal';
-import style from './DetailedReport.module.css';
+import style from './Modal.module.css';
 
 import { Container, Col, Row } from 'react-bootstrap';
-import { convertDate } from '../utilities';
+import { convertDate } from '../../../../shared/utilities';
 
-const DetailedReport = (props) => {
+const ModalReport = ({modalIsOpen, openModal, report }) => {
     return (<Modal
 
-        isOpen={props.modalIsOpen}
+        isOpen={modalIsOpen}
         ariaHideApp={false}
-        onRequestClose={() => { props.openModal() }}
+        onRequestClose={() => { openModal() }}
         style={{
             overlay: {
                 position: 'fixed',
@@ -42,7 +42,7 @@ const DetailedReport = (props) => {
             <Row>
                 <Col>
                     <h4 className={style.name}>
-                        {props.report.candidateName}
+                        {report.candidateName}
                     </h4>
                 </Col>
             </Row>
@@ -50,15 +50,15 @@ const DetailedReport = (props) => {
             <Row>
                 <Col lg="4" md="6" sm="12">
                     <ul className={style.ul}>
-                        <li className={style.li}>Company<h5 className={style.lih5}>{props.report.companyName}</h5></li>
-                        <li className={style.li}>Interview Date<h5 className={style.lih5}>{convertDate(props.report.interviewDate)}</h5></li>
-                        <li className={style.li}>Phase<h5 className={style.lih5}>{props.report.phase}</h5></li>
-                        <li className={style.li}>Status<h5 className={style.lih5}>{props.report.status}</h5></li>
+                        <li className={style.li}>Company<h5 className={style.lih5}>{report.companyName}</h5></li>
+                        <li className={style.li}>Interview Date<h5 className={style.lih5}>{convertDate(report.interviewDate)}</h5></li>
+                        <li className={style.li}>Phase<h5 className={style.lih5}>{report.phase}</h5></li>
+                        <li className={style.li}>Status<h5 className={style.lih5}>{report.status}</h5></li>
                     </ul>
                 </Col>
                 <Col lg='8' md="6" sm="12">
                     <ul>
-                        <li className={style.li}>Notes<p className={style.reportText}>{props.report.note}.</p></li>
+                        <li className={style.li}>Notes<p className={style.reportText}>{report.note}.</p></li>
                     </ul>
                 </Col>
             </Row>
@@ -67,4 +67,4 @@ const DetailedReport = (props) => {
     </Modal>)
 }
 
-export { DetailedReport }
+export { ModalReport }

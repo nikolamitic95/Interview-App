@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Candidate = ({ name, email, id }) => {
     return (
-        <Col xl='4' lg='6' md='6' sm='12'>
+        <Col  xl='4' lg='6' md='6' sm='12'>
 
             <Link className={styles.link} to={`./info/${id}`}>
 
