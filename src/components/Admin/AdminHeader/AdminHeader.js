@@ -3,8 +3,17 @@ import styles from './AdminHeader.module.css';
 
 import { Navbar, NavItem, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
+import{storageService} from '../../../services/storageService';
 
 const AdminHeader = () => {
+
+    const logOut = () => {
+        const answer = prompt("Are you sure? Answer with yes or no!");
+        if (answer === "yes") {
+            storageService.logOut()
+        }
+    }
+
     return (
         <Navbar className={styles.header}
             alignLinks="right"
@@ -23,7 +32,11 @@ const AdminHeader = () => {
                 preventScrolling: true
             }}
         >
-            
+            <Link className={styles.link} to='/'>
+                <NavItem  onClick={logOut} className={styles.headerColor}>
+                    Logout
+                </NavItem>
+            </Link>
             <Link className={styles.link} to='/admin/reports'>
                 <NavItem className={styles.headerColor}>
                     Reports

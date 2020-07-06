@@ -6,6 +6,7 @@ body {
 .loginForm {
     margin-top: 100px;
     margin-bottom: 100px;
+    border: 1px solid rgb(195, 195, 195);
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
@@ -38,7 +39,7 @@ body {
     width: 100%;
     min-height: 100%;
     padding: 20px;
-    background-color: #56baed;
+  
 }
 
 .btn {
@@ -114,5 +115,5 @@ body {
 }
 
 .input::placeholder {
-    color: #cccccc !important;
+    color: rgb(195, 195, 195) !important;
 }

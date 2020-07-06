@@ -12,7 +12,8 @@ import { NavList } from './NavList/NavList';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { CandidateSelector } from './CandidateSelector/CandidateSelector'
 import { CompanySelector } from './CompanySelector/CompanySelector';
-import {ReportDetails} from './ReportDetailsSelector/ReportDetailsSelector';
+import { ReportDetails } from './ReportDetailsSelector/ReportDetailsSelector';
+import { Link } from 'react-router-dom';
 
 
 class CreateReportPage extends React.Component {
@@ -23,7 +24,7 @@ class CreateReportPage extends React.Component {
             candidates: [],
             filteredCandidate: [],
             company: [],
-            filteredCompany:[],
+            filteredCompany: [],
             wizardStep: 1,
             newReportData: {
                 candidateId: null,
@@ -45,7 +46,7 @@ class CreateReportPage extends React.Component {
             })
         companyService.getCompanies()
             .then(data => {
-                this.setState({ company: data, filteredCompany:data })
+                this.setState({ company: data, filteredCompany: data })
             })
 
     }
@@ -141,15 +142,15 @@ class CreateReportPage extends React.Component {
                 <AdminHeader />
                 <Container className={styles.wrapper} fluid>
                     <Row>
-                        <Col lg="3">
-                            <NavList 
+                        <Col lg="3" md='4' sm='4'>
+                            <NavList
                                 wizardStep={this.state.wizardStep}
                                 candidateName={this.state.newReportData.candidateName}
                                 companyName={this.state.newReportData.companyName}
                             />
                         </Col>
                         {this.state.wizardStep === 1 &&
-                            <Col className={styles.line} lg="9">
+                            <Col className={styles.line} lg="9" md='8' sm='8'>
 
                                 <Row>
                                     <Col lg="12">
@@ -172,7 +173,7 @@ class CreateReportPage extends React.Component {
                                 </Row>
                             </Col>}
                         {this.state.wizardStep === 2 &&
-                            <Col className={styles.line} lg="9">
+                            <Col className={styles.line} lg="9" md='8' sm='8'>
 
                                 <Row>
                                     <Col lg="12">
@@ -188,7 +189,7 @@ class CreateReportPage extends React.Component {
                                                 getCompanyData={this.getCompanyData}
                                             />
                                             <Col className={styles.prev} lg='6'>
-                                                <Button onClick={this.previousStep} variant="primary">Previous</Button>
+                                                <Button onClick={this.previousStep} variant="primary">Back</Button>
                                             </Col>
                                             <Col className={styles.end} lg="6">
                                                 <Button onClick={this.nextStep} variant="primary">Next</Button>
@@ -197,8 +198,8 @@ class CreateReportPage extends React.Component {
                                     </Col>
                                 </Row>
                             </Col>}
-                            {this.state.wizardStep === 3 &&
-                            <Col className={styles.line} lg="9">
+                        {this.state.wizardStep === 3 &&
+                            <Col className={styles.line} lg="9" md='8' sm='8'>
                                 <Row>
                                     <Col lg='12'>
                                         <Row>
@@ -209,10 +210,10 @@ class CreateReportPage extends React.Component {
                                                 setNotes={this.setNotes}
                                             />
                                             <Col className={styles.prev} lg='6'>
-                                                <Button onClick={this.previousStep} variant="primary">Previous</Button>
+                                                <Button onClick={this.previousStep} variant="primary">Back</Button>
                                             </Col>
                                             <Col className={styles.end} lg="6">
-                                                <Button onClick={this.nextStep} variant="primary">Submit</Button>
+                                              <Link to='/admin/reports'><Button onClick={this.nextStep} variant="primary">Create</Button></Link>
                                             </Col>
                                         </Row>
                                     </Col>

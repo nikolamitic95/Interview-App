@@ -34,7 +34,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header isHomePage={true}/>
                 <Container>
                     <Search
                         searchedCandidates={this.searchedCandidates}
