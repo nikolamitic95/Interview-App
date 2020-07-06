@@ -1,0 +1,15 @@
+.line{
+    border-left: 1px solid;
+}
+.wrapper{
+    margin-top: 50px;
+}
+.end{
+    text-align: end;
+    padding-right: 0px !important;
+    margin-top: 25px;
+}
+.prev{
+    margin-top: 25px;
+    padding-left: 0px !important;
+}

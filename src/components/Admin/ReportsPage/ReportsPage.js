@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AdminHeader } from '../AdminHeader/AdminHeader';
 import { reportService } from '../../../services/reportService';
-import { Reports } from '../ReportsPage/Reports/Reports';
+import { ReportsList } from './Reports/ReportsList';
 import { Container } from 'react-bootstrap';
 import { ReportsSearch } from './Search/ReportsSearch';
 import { search } from '../../../shared/utilities';
@@ -57,7 +57,7 @@ class ReportsPage extends React.Component {
                     <ReportsSearch searchedReports={this.searchedReports} />
                 </Container>
                 <Container>
-                    <Reports
+                    <ReportsList
                         reports={this.state.filteredReports}
                         openModal={this.openModal}
                         modalIsOpen={this.state.modalIsOpen}

@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import 'materialize-css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 import { Switch, Route } from 'react-router-dom';
 import { HomePage } from './components/HomePage/HomePage';

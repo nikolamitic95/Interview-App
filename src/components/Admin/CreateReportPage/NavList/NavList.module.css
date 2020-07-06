@@ -1,0 +1,20 @@
+.content{
+    font-size: 25px;
+    font-weight: 600;
+}
+.fullContent{
+    margin-top: 50px;
+}
+.line{
+    border: 1px solid;
+}
+.navList{
+    color: #495057;
+}
+.title{
+    color: #495057;
+}
+.active{
+    color: black;
+    font-weight: 600;
+}

@@ -1,0 +1,35 @@
+.users {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(200, 199, 199);
+    margin-bottom: 15px;
+    /* margin-right: 15px; */
+}
+
+.users:focus{
+    background-color: #26A69A !important ;
+    color: white;
+}
+
+.users:hover{
+    background-color: #26A69A;
+    color: white;
+}
+
+.userImg {
+    margin-right: 20px;
+}
+
+.img {
+    border-radius: 25px;
+    width: 45px;
+}
+
+.userInfo>p {
+    margin: 0px;
+}
+
+.userInfo span {
+    font-weight: bold;
+}

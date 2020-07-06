@@ -10,7 +10,6 @@ const AdminHeader = () => {
             alignLinks="right"
             brand={<a className="brand-logo">Interview Reports</a>}
             id="mobile-nav"
-            centerChildren
             menuIcon={<Icon>menu</Icon>}
             options={{
                 draggable: true,

@@ -1,5 +1,7 @@
 .header {
     background-color: #343a40 !important;
+    padding-left: 30px;
+    padding-right: 15px;
 }
 .link {
     text-decoration: none !important;
