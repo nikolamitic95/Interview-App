@@ -15,7 +15,8 @@ class ReportsPage extends React.Component {
         this.state = {
             reports: [],
             filteredReports: [],
-            modalIsOpen: false
+            modalIsOpen: false,
+            report: {}
         }
     }
 
@@ -29,8 +30,8 @@ class ReportsPage extends React.Component {
         this.setState({ filteredReports: results })
     }
 
-    openModal = () => {
-        this.setState(prevState => ({ modalIsOpen: !prevState.modalIsOpen }))
+    openModal = (report = {}) => {
+        this.setState(prevState => ({ modalIsOpen: !prevState.modalIsOpen, report  }))
     }
 
     removeReport = (id) => {
@@ -62,6 +63,7 @@ class ReportsPage extends React.Component {
                         openModal={this.openModal}
                         modalIsOpen={this.state.modalIsOpen}
                         removeReport={this.removeReport}
+                        report={this.state.report}
                     />
                 </Container>
             </div>

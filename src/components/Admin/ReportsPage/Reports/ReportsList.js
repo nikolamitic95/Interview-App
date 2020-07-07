@@ -2,10 +2,16 @@ import React from 'react';
 
 import { Report } from './Report'
 import { Table } from 'react-bootstrap'
+import { DetailedReport } from '../../../../shared/Modal/DetailedReport'
 
 
-const ReportsList = ({ reports, openModal, modalIsOpen, removeReport }) => {
+const ReportsList = ({ reports, report, openModal, modalIsOpen, removeReport }) => {
     return (
+        <>
+        <DetailedReport
+                modalIsOpen={modalIsOpen}
+                openModal={openModal}
+                report={report} />
         <Table striped bordered hover>
             <thead>
                 {reports.map(report => (
@@ -22,11 +28,11 @@ const ReportsList = ({ reports, openModal, modalIsOpen, removeReport }) => {
                         modalIsOpen={modalIsOpen}
                         removeReport={removeReport}
                     />
-
                 ))}
             </thead>
 
         </Table>
+        </>
     )
 }
 

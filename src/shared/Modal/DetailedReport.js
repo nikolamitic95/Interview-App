@@ -10,7 +10,7 @@ const DetailedReport = ({modalIsOpen, openModal, report}) => {
 
         isOpen={modalIsOpen}
         ariaHideApp={false}
-        onRequestClose={() => { openModal() }}
+        onRequestClose={() => { openModal({}) }}
         style={{
             overlay: {
                 position: 'fixed',
