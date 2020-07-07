@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+import styles from './App.module.css';
 import 'materialize-css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";

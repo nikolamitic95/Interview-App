@@ -10,6 +10,7 @@
 }
 .navList{
     color: #495057;
+  
 }
 .title{
     color: #495057;
@@ -17,4 +18,7 @@
 .active{
     color: black;
     font-weight: 600;
+}
+.nav{
+    margin-bottom: 50px;
 }

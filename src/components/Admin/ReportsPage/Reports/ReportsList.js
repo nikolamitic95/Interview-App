@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Report } from './Report'
-import {Table} from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 
 
 const ReportsList = ({ reports, openModal, modalIsOpen, removeReport }) => {

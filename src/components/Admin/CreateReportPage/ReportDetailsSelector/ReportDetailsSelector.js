@@ -57,7 +57,7 @@ const ReportDetails = ({ setDate, setPhase, setStatus, setNotes }) => {
         <Col lg={4}>
           <DatePicker
             id="reportDate'"
-            label="Interview Date:"
+            label="Date:"
             required
             onChange={onChangeDate}
             options={{

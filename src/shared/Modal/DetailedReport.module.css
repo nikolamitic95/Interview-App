@@ -13,3 +13,8 @@
 .ul {
     margin-bottom: 30px !important;
 }
+.note {
+    padding-left: 5%;
+    word-wrap: break-word !important;
+    
+}

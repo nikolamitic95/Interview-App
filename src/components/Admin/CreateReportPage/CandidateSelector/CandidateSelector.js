@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { Candidate } from './Candidate';
 
-const CandidateSelector = ({ candidates, getCandidateData}) => {
+const CandidateSelector = ({ candidates, getCandidateData }) => {
     return (
         candidates.map((can, i) => (
             <Candidate

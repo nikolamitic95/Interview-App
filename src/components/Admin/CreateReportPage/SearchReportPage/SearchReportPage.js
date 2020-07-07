@@ -16,7 +16,7 @@ const SearchCandidate = ({ searcedCandidate }) => {
                 <span>
                     <Form >
                         <FaSearch className={styles.icon} />
-                        <FormControl  onChange={onSearch} type="text" placeholder="Search" className={`${styles.input} mr-sm-2 `} />
+                        <FormControl onChange={onSearch} type="text" placeholder="Search" className={`${styles.input} mr-sm-2 `} />
                     </Form>
                 </span>
             </Col>
@@ -36,7 +36,7 @@ const SearchCompany = ({ searcedCompany }) => {
                 <span>
                     <Form >
                         <FaSearch className={styles.icon} />
-                        <FormControl  onChange={onSearch} type="text" placeholder="Search" className={`${styles.input} mr-sm-2 `} />
+                        <FormControl onChange={onSearch} type="text" placeholder="Search" className={`${styles.input} mr-sm-2 `} />
                     </Form>
                 </span>
             </Col>

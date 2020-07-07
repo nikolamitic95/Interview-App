@@ -3,10 +3,9 @@ import React from 'react';
 import { Header } from './Header/Header';
 import { Search } from './Search/Search';
 import { candidateService } from '../../services/candidateService';
-import { Container, Row } from 'react-materialize';
+import { Container, Row } from 'react-bootstrap';
 import { Candidates } from './Candidates/Candidates';
 import { search } from '../../shared/utilities';
-
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -32,9 +31,12 @@ class HomePage extends React.Component {
     }
 
     render() {
+        const mdCenter = "justify-content-md-center";
+        const smCenter = "justify-content-sm-center";
+        const xsCenter = "justify-content-xs-center";
         return (
             <div>
-                <Header isHomePage={true}/>
+                <Header isHomePage={true} />
                 <Container>
                     <Search
                         searchedCandidates={this.searchedCandidates}
@@ -43,7 +45,7 @@ class HomePage extends React.Component {
                 </Container>
 
                 <Container>
-                    <Row>
+                    <Row className={`${mdCenter} ${smCenter} ${xsCenter}`} >
                         <Candidates
                             candidates={this.state.filteredCandidates}
                         />

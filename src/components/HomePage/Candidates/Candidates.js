@@ -12,7 +12,6 @@ const Candidates = ({ candidates }) => {
                 name={candidate.name}
                 email={candidate.email}
             />
-
         ))
 
     )

@@ -26,6 +26,7 @@ class CreateReportPage extends React.Component {
             company: [],
             filteredCompany: [],
             wizardStep: 1,
+            wrongStatus: false,
             newReportData: {
                 candidateId: null,
                 candidateName: null,
@@ -136,13 +137,12 @@ class CreateReportPage extends React.Component {
         if (!access) {
             this.props.history.push('/admin')
         }
-
         return (
             <div>
                 <AdminHeader />
                 <Container className={styles.wrapper} fluid>
-                    <Row>
-                        <Col lg="3" md='4' sm='4'>
+                    <Row className='justify-content-xs-center'>
+                        <Col xs='auto' sm='4' md='4' lg="3" >
                             <NavList
                                 wizardStep={this.state.wizardStep}
                                 candidateName={this.state.newReportData.candidateName}
@@ -188,10 +188,10 @@ class CreateReportPage extends React.Component {
                                                 company={this.state.filteredCompany}
                                                 getCompanyData={this.getCompanyData}
                                             />
-                                            <Col className={styles.prev} lg='6'>
+                                            <Col className={styles.prev} lg='6' md='6' sm='6' xs='6'>
                                                 <Button onClick={this.previousStep} variant="primary">Back</Button>
                                             </Col>
-                                            <Col className={styles.end} lg="6">
+                                            <Col className={styles.end} lg="6" md='6' sm='6' xs='6'>
                                                 <Button onClick={this.nextStep} variant="primary">Next</Button>
                                             </Col>
                                         </Row>
@@ -209,11 +209,11 @@ class CreateReportPage extends React.Component {
                                                 setStatus={this.setStatus}
                                                 setNotes={this.setNotes}
                                             />
-                                            <Col className={styles.prev} lg='6'>
+                                            <Col className={styles.prev} lg='6' md='6' sm='6' xs='6'>
                                                 <Button onClick={this.previousStep} variant="primary">Back</Button>
                                             </Col>
-                                            <Col className={styles.end} lg="6">
-                                              <Link to='/admin/reports'><Button onClick={this.nextStep} variant="primary">Create</Button></Link>
+                                            <Col className={styles.end} lg="6" md='6' sm='6' xs='6'>
+                                                <Link to='/admin/reports'><Button onClick={this.nextStep} variant="primary">Create</Button></Link>
                                             </Col>
                                         </Row>
                                     </Col>

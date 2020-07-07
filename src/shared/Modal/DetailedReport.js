@@ -57,7 +57,7 @@ const DetailedReport = ({modalIsOpen, openModal, report}) => {
                     </ul>
                 </Col>
                 <Col lg='8' md="6" sm="12">
-                    <ul>
+                    <ul className={style.note}>
                         <li className={style.li}>Notes<p className={style.reportText}>{report.note}.</p></li>
                     </ul>
                 </Col>

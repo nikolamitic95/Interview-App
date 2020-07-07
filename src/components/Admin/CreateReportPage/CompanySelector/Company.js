@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './CompanySelector.module.css';
 
 import { Col } from 'react-bootstrap';

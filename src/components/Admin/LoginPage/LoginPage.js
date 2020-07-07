@@ -43,7 +43,7 @@ class LoginPage extends React.Component {
                     <div>
                         {this.state.wrongUser ? <span className={styles.wrong}> wrong email or password</span> : ""}
                     </div>
-                    
+
                     <TextInput
                         className={styles.input}
                         onChange={this.loginCheck}
