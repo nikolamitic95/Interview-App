@@ -2,10 +2,20 @@
     background-color: #343a40 !important;
     padding-left: 30px;
     padding-right: 15px;
+    color: #fff;
 }
 .link {
     text-decoration: none !important;
-}
-.headerColor {
     color: #fff !important;
 }
+
+.menu:hover{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+@media only screen and (max-width: 990px) {
+    .link {
+      color: black !important;
+    }
+  }

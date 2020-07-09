@@ -3,7 +3,21 @@
 }
 .link{
     text-decoration: none !important;
+    color: #fff !important;
 }
-.headerColor{
-    color: white !important;
+
+.menu{
+    text-decoration: none !important;
+    color: #fff !important;
 }
+@media only screen and (max-width: 990px) {
+    .link {
+      color: black !important;
+    }
+  }
+
+  /* .brand{
+      width: 100%;
+  } */
+
+ 

@@ -16,7 +16,7 @@ const AdminHeader = () => {
             alignLinks="right"
             brand={<a className="brand-logo">Interview Reports</a>}
             id="mobile-nav"
-            menuIcon={<Icon>menu</Icon>}
+            menuIcon={<Icon className={styles.menu}>menu</Icon>}
             options={{
                 draggable: true,
                 edge: 'left',
@@ -30,7 +30,7 @@ const AdminHeader = () => {
             }}
         >
             <Link className={styles.link} to='/'>
-                <NavItem onClick={logOut} className={styles.headerColor}>
+                <NavItem  onClick={logOut} className={styles.headerColor}>
                     Logout
                 </NavItem>
             </Link>

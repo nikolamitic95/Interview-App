@@ -18,7 +18,7 @@ const DetailedReport = ({modalIsOpen, openModal, report}) => {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: 'rgba(86, 186, 237, 0.1)'
+                backgroundColor: 'rgba(86, 186, 237, 0.6)'
             },
             content: {
                 position: 'absolute',

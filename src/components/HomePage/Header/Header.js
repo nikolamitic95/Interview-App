@@ -8,10 +8,10 @@ const Header = () => {
     return (
         <Navbar className={styles.header}
             alignLinks="right"
-            brand={<a className="brand-logo">Interview Reports</a>}
+            brand={<a className={` ${styles.brand} brand-logo`}>Interview Reports</a>}
             id="mobile-nav"
             centerChildren
-            menuIcon={<Icon>menu</Icon>}
+            menuIcon={<Icon className={styles.menu}>menu</Icon>}
             options={{
                 draggable: true,
                 edge: 'left',

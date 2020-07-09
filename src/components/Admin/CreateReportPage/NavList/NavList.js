@@ -6,24 +6,51 @@ const NavList = ({ candidateName, companyName, wizardStep }) => {
         <div className={styles.nav}>
             {wizardStep === 1 &&
                 <ul className={styles.navList}>
-                    <li><h5 className={styles.active}><span>1</span> Select Candidate</h5></li>
-                    <li><h5><span>2</span> Select Company</h5></li>
-                    <li><h5><span>3</span> Fill Report Details</h5></li>
+                    <li className={`${styles.flex} ${styles.active}`}>
+                        <span className={styles.circle}>1</span>
+                        <span>Select Candidate</span>
+                    </li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>2</span>
+                        <span>Select Company</span>
+                    </li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>3</span>
+                        <span>Fill Report Details</span>
+                    </li>
                 </ul>
             }
 
             {wizardStep === 2 &&
                 <ul className={styles.navList}>
-                    <li><h5><span>1</span> Select Candidate</h5></li>
-                    <li><h5 className={styles.active}><span>2</span> Select Company</h5></li>
-                    <li><h5><span>3</span> Fill Report Details</h5></li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>1</span>
+                        <span>Select Candidate</span>
+                    </li>
+                    <li className={`${styles.flex} ${styles.active}`}>
+                        <span className={styles.circle}>2</span>
+                        <span>Select Company</span>
+                    </li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>3</span>
+                        <span>Fill Report Details</span>
+                    </li>
                 </ul>}
 
             {wizardStep === 3 &&
                 <ul className={styles.navList}>
-                    <li><h5><span>1</span> Select Candidate</h5></li>
-                    <li><h5><span>2</span> Select Company</h5></li>
-                    <li><h5 className={styles.active}><span>3</span> Fill Report Details</h5></li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>1</span>
+                        <span>Select Candidate</span>
+                    </li>
+                    <li className={styles.flex}>
+                        <span className={styles.circle}>2</span>
+                        <span>Select Company</span>
+                    </li>
+                    <li className={`${styles.flex} ${styles.active}`}>
+                        <span className={styles.circle}>3</span>
+                        <span>Fill Report Details</span>
+                    </li>
                 </ul>}
 
             {wizardStep === 2 &&
