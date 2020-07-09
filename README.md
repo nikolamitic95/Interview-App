@@ -6,7 +6,7 @@ Each Interview Report have a flag if the Candidate has passed/not passed the cur
 
 ## Instructions:
 
-In order for this project to work as intended , you need to clone and run this server to your local machine : https://github.com/nikolamitic95/interviews-reports-api-mock
+In order for this project to work as intended , you need to clone and run this server to your local machine : https://github.com/nikolamitic95/interviews-reports-api-mock 
 
 Login: <br />
 username: dev@dev.com <br />
