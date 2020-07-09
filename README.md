@@ -8,13 +8,13 @@ Each Interview Report have a flag if the Candidate has passed/not passed the cur
 
 In order for this project to work as intended , you need to clone and run this server to your local machine : https://github.com/nikolamitic95/interviews-reports-api-mock
 
-Login:
-username: dev@dev.com
+Login: <br />
+username: dev@dev.com <br />
 password: developer
 
 ## Stack
 
-Language: HTML5, CSS3, JS(ES6+)
-Framework: React
-Library: Bootstrap, Materialize
+Language: HTML5, CSS3, JS(ES6+) <br />
+Framework: React <br />
+Library: Bootstrap, Materialize <br />
 Package Manager: npm
