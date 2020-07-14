@@ -8,10 +8,10 @@ import { convertDate } from '../../../shared/utilities';
 const CandidateInfo = ({ name, email, dob, education }) => {
     const mdCenter = "justify-content-md-center";
     const smCenter = "justify-content-sm-center";
-    const xsCenter = "justify-content-xs-center";
+
     return (
         <Container className={styles.container}>
-            <Row className={`${mdCenter} ${smCenter} ${xsCenter}`}>
+            <Row className={`${styles.center} ${mdCenter} ${smCenter} `}>
                 <Col lg='4' md='auto' sm='auto' xs='auto'>
                     <div>
                         <img className={styles.img} src="../user.jpg" />

@@ -12,3 +12,8 @@
 .container{
     margin-top: 35px !important;
 }
+@media only screen and (max-width: 576px) {
+    .center {
+      justify-content: center !important;
+    }
+  }

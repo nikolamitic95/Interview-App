@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './HomePage.module.css'
+
 import { Header } from './Header/Header';
 import { Search } from './Search/Search';
 import { candidateService } from '../../services/candidateService';
@@ -33,7 +35,6 @@ class HomePage extends React.Component {
     render() {
         const mdCenter = "justify-content-md-center";
         const smCenter = "justify-content-sm-center";
-        const xsCenter = "justify-content-xs-center";
         return (
             <div>
                 <Header isHomePage={true} />
@@ -45,7 +46,7 @@ class HomePage extends React.Component {
                 </Container>
 
                 <Container>
-                    <Row className={`${mdCenter} ${smCenter} ${xsCenter}`} >
+                    <Row className={`${styles.center} ${mdCenter} ${smCenter}`} >
                         <Candidates
                             candidates={this.state.filteredCandidates}
                         />

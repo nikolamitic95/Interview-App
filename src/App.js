@@ -12,17 +12,21 @@ import { InfoPage } from './components/InfoPage/InfoPage';
 import { LoginPage } from './components/Admin/LoginPage/LoginPage';
 import { ReportsPage } from './components/Admin/ReportsPage/ReportsPage';
 import { CreateReportPage } from './components/Admin/CreateReportPage/CreateReportPage';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/info/:id' component={InfoPage} />
-        <Route exact path='/admin' component={LoginPage} />
-        <Route exact path='/admin/reports' component={ReportsPage} />
-        <Route exact path='/admin/reports/createreport' component={CreateReportPage} />
-      </Switch>
+    <div className='page-container'>
+      <div className='content'>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/info/:id' component={InfoPage} />
+          <Route exact path='/admin' component={LoginPage} />
+          <Route exact path='/admin/reports' component={ReportsPage} />
+          <Route exact path='/admin/reports/createreport' component={CreateReportPage} />
+        </Switch>
+      </div>
+      <Footer />
     </div>
   );
 }

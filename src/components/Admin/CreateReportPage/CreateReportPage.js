@@ -52,12 +52,12 @@ class CreateReportPage extends React.Component {
 
     }
 
-    searcedCandidate = (textInput) => {
+    searchedCandidate = (textInput) => {
         const result = search(this.state.candidates, ["name"], textInput)
         this.setState({ filteredCandidate: result })
     }
 
-    searcedCompany = (textInput) => {
+    searchedCompany = (textInput) => {
         const result = search(this.state.company, ["companyName"], textInput)
         this.setState({ filteredCompany: result })
     }
@@ -141,7 +141,7 @@ class CreateReportPage extends React.Component {
             <div>
                 <AdminHeader />
                 <Container className={styles.wrapper} fluid>
-                    <Row className='justify-content-xs-center'>
+                    <Row className={styles.center}>
                         <Col xs='auto' sm='4' md='4' lg="3" >
                             <NavList
                                 wizardStep={this.state.wizardStep}
@@ -155,7 +155,7 @@ class CreateReportPage extends React.Component {
                                 <Row>
                                     <Col lg="12">
                                         <SearchCandidate
-                                            searcedCandidate={this.searcedCandidate}
+                                            searchedCandidate={this.searchedCandidate}
                                         />
                                     </Col>
                                     <Col lg='12'>
@@ -178,7 +178,7 @@ class CreateReportPage extends React.Component {
                                 <Row>
                                     <Col lg="12">
                                         <SearchCompany
-                                            searcedCompany={this.searcedCompany}
+                                            searchedCompany={this.searchedCompany}
                                         />
                                     </Col>
                                     <Col lg='12'>

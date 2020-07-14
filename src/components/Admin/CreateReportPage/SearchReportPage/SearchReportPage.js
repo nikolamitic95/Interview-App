@@ -4,10 +4,10 @@ import styles from './SearchReportPage.module.css';
 import { Form, FormControl, Row, Col } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
-const SearchCandidate = ({ searcedCandidate }) => {
+const SearchCandidate = ({ searchedCandidate }) => {
 
     const onSearch = (e) => {
-        searcedCandidate(e.target.value)
+        searchedCandidate(e.target.value)
     }
 
     return (
@@ -24,10 +24,10 @@ const SearchCandidate = ({ searcedCandidate }) => {
     )
 }
 
-const SearchCompany = ({ searcedCompany }) => {
+const SearchCompany = ({ searchedCompany }) => {
 
     const onSearch = (e) => {
-        searcedCompany(e.target.value)
+        searchedCompany(e.target.value)
     }
 
     return (
