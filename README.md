@@ -18,11 +18,11 @@ Open http://localhost:3000 to view it in the browser.
 In order for this project to work as intended , you need to clone and run this server to your local machine : https://github.com/nikolamitic95/interviews-reports-api-mock 
 
 ### Login: 
-username: dev@dev.com <br />
-password: developer
+* username: dev@dev.com <br />
+* password: developer
 
 ## Stack
 
-Language: HTML5, CSS3, JS(ES6+) <br />
-Library: React, Bootstrap, Materialize <br />
-Package Manager: npm
+* Language: HTML5, CSS3, JS(ES6+) <br />
+* Library: React, Bootstrap, Materialize <br />
+* Package Manager: npm
